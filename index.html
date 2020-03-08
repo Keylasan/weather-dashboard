@@ -1,58 +1,110 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src=script.js></script>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</script>
-    <title>Weather Dashboard</title>
-<div class= "container">
-    <div class="jumbotron" class="main" style= "background: rgb(7, 166, 224)">
-      
-      <h1 class="display-4" class= "title">What's The Weather Like?</h1>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src=script.js></script>
 
-        <p class="lead"></p>
-        <hr class="my-4">
-        <p></p> 
-        <p class="lead">
-                <div class="active-cyan-3 active-cyan-4 mb-4">
-                        <input class="form-control" type="text" placeholder="Search City"  id= "searchBar" aria-label="Search">
-                      </div>
-          <a class="btn btn-primary btn-lg" href="#" role="button" id= "searchCity" onload="searchCity()" onclick= searchCity()>Find Out</a>
-        </p>
+  </script>
+  <title>Weather Dashboard</title>
+  <div class="container">
+    <div class="jumbotron" class="main" style="background: rgb(7, 166, 224)">
+
+      <h1 class="display-4" class="title">What's The Weather Like?</h1>
+
+      <p class="lead"></p>
+      <hr class="my-4">
+      <p></p>
+      <p class="lead">
+        <div class="active-cyan-3 active-cyan-4 mb-4">
+          <input class="form-control" type="text" placeholder="Search City" id="searchBar" aria-label="Search">
+        </div>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="searchCity" onload="searchCity()"
+          onclick=searchCity()>Find Out</a>
+      </p>
+    </div>
+  </div>
+</head>
+
+<body onload=loadPage()>
+
+
+
+
+  <!---<h1>This is what your weather conditions look like..</h1>-->
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <div id="dayOne">
+          <p id="dateDay1">date</p>
+          <p id="tempDay1">temp</p>
+          <p id="humidDay1"> humind</p>
+          <p id="winSpeedDay1">WIND</p>
+          <P id=UVindexDay1>uv</P>
+        </div>
       </div>
-</div>
-  </head>
-  <body onload= loadPage()>
+      <div class="col-2">
+        <div id="dayTwo">
+          <p id="dateDay2">date</p>
+          <p id="tempDay2">temp</p>
+          <p id="humidDay2"> humind</p>
+          <p id="winSpeedDay2">WIND</p>
+          <P id=UVindex>uv</P>
+        </div>
+      </div>
+      <div class="col-2">
+        <div id="dayThree">
+          <p id="dateDay3">date</p>
+          <p id="tempDay3">temp</p>
+          <p id="humidDay3"> humind</p>
+          <p id="winSpeedDay3">WIND</p>
+          <P id=UVindexDay3></P>
+        </div>
+      </div>
+      <div class="col-2">
+        <div id="dayFour">
+          <p id="dateDay4">date</p>
+          <p id="tempDay4">temp</p>
+          <p id="humidDay4"> humind</p>
+          <p id="winSpeedDay4">WIND</p>
+          <P id=UVindexDay4>uv</P>
+        </div>
+      </div>
+      <div class="col-2">
+        <div id="dayFive">
+          <p id="dateDay5">date</p>
+          <p id="tempDay5">temp</p>
+          <p id="humidDay5"> humind</p>
+          <p id="winSpeedDay5">WIND</p>
+          <P id=UVindexDay5>uv</P>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
-    
 
 
-    <!---<h1>This is what your weather conditions look like..</h1>
-<div class="container">
- <div id= "dayOne">
-<p id= "tempDay1">hello</p>
-<p id= "humidDay1"> hi</p>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</body>
 
-
-
- </div>
-</div>
--->
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </body>
 </html>
