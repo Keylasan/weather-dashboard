@@ -15,7 +15,7 @@ function searchCity() {
     console.log(response);
     long = response.city.coord.lon;
     lat = response.city.coord.lat;
-    //aquiring date
+    //aquiring date for 5 day forecast
     $("#dateDay1").text(response.list[0].sys.dt_txt)
     $("#dateDay2").text(response.list[1].sys.dt_txt)
     $("#dateDay3").text(response.list[2].sys.dt_txt)
@@ -35,16 +35,16 @@ function searchCity() {
     $("#humidDay4").text(response.list[3].main.humidity)
     $("#humidDay5").text(response.list[4].main.humidity)
 
-    //aquiring wind speed
+    //aquiring wind speed for 5 day forecast
     $("#windDay1").text(response.list[0].wind.speed)
     $("#windDay2").text(response.list[1].wind.speed)
     $("#windDay3").text(response.list[2].wind.speed)
     $("#windDay4").text(response.list[3].wind.speed)
     $("#windDay5").text(response.list[4].wind.speed)
 
-    //aquiring UV Index
-    $("#UVDay1").text(response.list[0].main.temp)
-    $("#UVDay2").text(response.list[1].main.temp)
+    //aquiring UV Index for 5 day forecast
+    $("#UVDay1").text(response.list[0].weather.description)
+    $("#UVDay2").text(response.list[1].weather.description)
     $("#UVDay3").text(response.list[2].main.temp)
     $("#UVDay4").text(response.list[3].main.temp)
     $("#UVDay5").text(response.list[4].main.temp)
